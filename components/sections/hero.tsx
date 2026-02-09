@@ -43,8 +43,20 @@ function CountUp({ end, suffix = "" }: { end: number; suffix?: string }) {
     </span>
   );
 }
-
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isVideoVisible = useInView(videoRef);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isVideoVisible) {
+        videoRef.current.play().catch(() => {});
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isVideoVisible]);
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background pt-20">
       {/* Background Particles */}
@@ -64,6 +76,24 @@ export function Hero() {
 
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <div className="flex flex-col items-center text-center">
+          {/* Animated Logo Video */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8 relative"
+          >
+            <div className="absolute inset-0 blur-3xl bg-brand-orange/20 rounded-full" />
+            <video
+              ref={videoRef}
+              src="/logo_animated_png.mp4"
+              loop
+              muted
+              playsInline
+              className="h-48 w-48 md:h-64 md:w-64 object-contain relative z-10"
+            />
+          </motion.div>
+
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}

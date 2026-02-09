@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Clover, Linkedin, Github, Twitter, Mail } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -11,7 +12,13 @@ export function Footer() {
               href="/"
               className="flex items-center space-x-2 text-foreground"
             >
-              <Clover className="h-8 w-8 text-brand-coral" />
+              <Image
+                src="/logo_fhd_png.png"
+                alt="Clove Logo"
+                width={100}
+                height={100}
+                className="h-10 w-auto object-contain"
+              />
               <span className="text-2xl font-bold tracking-tight">Clove</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-xs">
@@ -106,7 +113,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4" />
-                <span>hola@cloveautomations.com</span>
+                <span>cloveautomationsxyz@gmail.com</span>
               </li>
               <li>
                 <p>Panamá, Centroamérica</p>

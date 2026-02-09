@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clover, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { cn } from "@/lib/utils";
@@ -45,7 +46,13 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Clover className="h-8 w-8 text-brand-coral" />
+            <Image
+              src="/logo_fhd_png.png"
+              alt="Clove Logo"
+              width={120}
+              height={120}
+              className="h-12 w-auto object-contain"
+            />
             <span className="text-2xl font-bold tracking-tight text-foreground">
               Clove
             </span>
