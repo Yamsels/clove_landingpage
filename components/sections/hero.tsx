@@ -90,7 +90,7 @@ export function Hero() {
               loop
               muted
               playsInline
-              className="h-48 w-48 md:h-64 md:w-64 object-contain relative z-10"
+              className="h-80 w-80 md:h-[500px] md:w-[500px] object-contain relative z-10"
             />
           </motion.div>
 

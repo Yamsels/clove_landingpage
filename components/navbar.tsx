@@ -54,7 +54,7 @@ export function Navbar() {
               className="h-12 w-auto object-contain"
             />
             <span className="text-2xl font-bold tracking-tight text-foreground">
-              Clove
+              CLOVE AUTOMATIONS
             </span>
           </Link>
 
