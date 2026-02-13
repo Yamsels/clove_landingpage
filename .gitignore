@@ -40,6 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+
 # agent skills
 .agent
 .agents
+
+# internal documentation & assets
+/images
+WALKTHROUGH.md
+N8N_WORKFLOW_GUIDE.md
