@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+export const revalidate = 60;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://cloveautomations.com";
